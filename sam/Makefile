@@ -11,8 +11,8 @@ copy: ## Copies section files into the official sections folder
 	rsync * ${OFFICIAL_REPO}
 
 push: copy ## Pushes both this repo and official repo to GitHub
-	# git add -A
-	# git commit -m "${LAST_DISC}"
-	# git push
+	git add -A
+	git commit -m "${LAST_DISC}"
+	git push
 	cd ${OFFICIAL_REPO} && \
 	  git add -A && git commit -m "sam ${LAST_DISC}" && git push
